@@ -3,11 +3,12 @@ ASM = nasm
 ASMFLAGS32 = -felf
 ASMSRC32 = ../lyrebirdos/boot/kickstart32.s
 
-#DCOMPILER = gdc
-#DFLAGS32 = -m32 -gdwarf-2 -nostdlib -fPIC -c 
+DCOMPILER = gdc
 
-DCOMPILER = dmd
-DFLAGS32 = -m32 -g -c
+DFLAGS32 = -m32 -gdwarf-2 -nostdlib -fPIC -c 
+
+#DCOMPILER = dmd
+#DFLAGS32 = -m32 -g -c
 
 DSRC = ../lyrebirdos/kernel/kmain.d
 
@@ -34,7 +35,7 @@ kickstart32:
 	$(ASM) $(ASMFLAGS32) -o kickstart32.o $(ASMSRC32)
 
 kernel32.main:
-	$(DCOMPILER) $(DFLAGS32) -ofkernel32.main.o $(DSRC)
+	$(DCOMPILER) $(DFLAGS32) -o kernel32.main.o $(DSRC)
 
 linkit32:
 	$(LDLINKER) $(LDFLAGS32) $(LDSRC32) -o kernel32.bin $(OBJS32)
