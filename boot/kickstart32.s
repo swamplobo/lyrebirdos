@@ -1,3 +1,10 @@
+;####################################################
+;  File: kickstart32.s
+;  Created: 2015-10-29 15:34:04
+;  Modified: 2015-10-29 15:34:09
+; 
+;  See LICENSE file for license and copyright details
+;####################################################
 BITS 32
 
 global kickstart

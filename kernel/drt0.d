@@ -1,13 +1,12 @@
-//############################################
-// Copyright (C) Lyrebird Software 1996-2014
+//###################################################
 // File: drt0.d
-// Created: 2014-05-07 19:49:42
-// Modified: 2014-05-07 20:25:37
-//############################################
+// Created: 2015-10-29 15:34:04
+// Modified: 2015-10-29 15:34:09
+//
+// See LICENSE file for license and copyright details
+//###################################################
 
 module kernel.drt0;
-
-
 
 size_t kstrlen(immutable char* str)
 {
